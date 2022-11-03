@@ -1,6 +1,10 @@
+class NotStringSymbolError(TypeError):
+    pass
+
+
 def anagram(text: str) -> str:
-    if type(text) != str:
-        raise TypeError('Выражение должно содержать только строковые символы')
+    if not isinstance(text, str):
+        raise NotStringSymbolError('You must use only string symbol')
 
     words_list = text.split(' ')
     new_list = []
@@ -20,13 +24,3 @@ def anagram(text: str) -> str:
         new_list.append(''.join(word_with_symbol))
 
     return ' '.join(new_list)
-
-print(anagram('a1b                        2b'))
-
-if __name__ == '__main__':
-    cases = [
-        ('a1bcd efg!h', 'd1cba hgf!e'),
-    ]
-
-    for text, reversed_text in cases:
-        assert anagram(text) == reversed_text
