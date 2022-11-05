@@ -1,6 +1,6 @@
 import unittest
 from anagrams import anagram
-
+'исправлено в гит'
 
 class AnagramTest(unittest.TestCase):
     cases = [
