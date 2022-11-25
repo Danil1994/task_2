@@ -11,6 +11,7 @@ def anagram(text: str) -> str:
     """
     I write it or the PC and load it to the git hub!
     """
+    '''But I dont want see it here delete it and reload!'''
 
     # made new word without symbol, only letters
     for word in words_list:
