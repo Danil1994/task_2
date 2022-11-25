@@ -8,6 +8,9 @@ def anagram(text: str) -> str:
 
     words_list = text.split(' ')
     new_list = []
+    """
+    I write it or the PC and load it to the git hub!
+    """
 
     # made new word without symbol, only letters
     for word in words_list:
